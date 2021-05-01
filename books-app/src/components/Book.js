@@ -1,5 +1,7 @@
-const Book = () => {
-    return <p>Book Component</p>
+const Book = ({ image }) => {
+    return (
+        <img src={image} alt=""/>
+    )
 };
 
 export default Book;
