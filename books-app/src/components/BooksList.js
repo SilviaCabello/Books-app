@@ -5,7 +5,9 @@ const BooksList = ({ booksInfo }) => {
   return (
     <div>
       <p>BooksList Component</p>
-      <Book />
+      {booksInfo.map((book) => (
+        <Book {...book} />
+      ))}
     </div>
   );
 };
