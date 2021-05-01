@@ -81,7 +81,7 @@ const books = [
 function App() {
   return (
     <div className="App">
-      <BooksList />
+      <BooksList booksInfo={books} />
     </div>
   );
 }
