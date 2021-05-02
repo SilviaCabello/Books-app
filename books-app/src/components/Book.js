@@ -1,6 +1,6 @@
 const Book = ({ image, title, author }) => {
   return (
-    <div>
+    <div className="card-container">
       <div className="image-container">
         <img src={image} alt="book cover " />
       </div>
