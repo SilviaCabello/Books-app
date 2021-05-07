@@ -9,7 +9,7 @@ const Book = ({ image, title, author }) => {
         <img src={image} alt="book cover " />
       </div>
       <h3>{title}</h3>
-      <div onClick={() => setIsFavorite(!isFavorite)}>{isFavorite ? "★" : "☆"}</div>
+      <div className="star" onClick={() => setIsFavorite(!isFavorite)}>{isFavorite ? "★" : "☆"}</div>
       <p>{author}</p>
     </div>
   );
