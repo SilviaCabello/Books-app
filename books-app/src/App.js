@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <BooksList booksInfo={books} />
+      <BooksList handleFavorite={handleFavorite} booksInfo={books} />
     </div>
   );
 }

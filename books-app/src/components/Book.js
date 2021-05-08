@@ -1,7 +1,12 @@
 import { useState } from "react";
 
-const Book = ({ image, title, author }) => {
-  const [isFavorite, setIsFavorite] = useState(false)
+const Book = ({ image, title, author, handleFavorite }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const handleClick = () => {
+    setIsFavorite(!isFavorite);
+    handleFavorite();
+  };
 
   return (
     <div className="card-container">
@@ -9,7 +14,9 @@ const Book = ({ image, title, author }) => {
         <img src={image} alt="book cover " />
       </div>
       <h3>{title}</h3>
-      <div className="star" onClick={() => setIsFavorite(!isFavorite)}>{isFavorite ? "★" : "☆"}</div>
+      <div className="star" onClick={handleClick}>
+        {isFavorite ? "★" : "☆"}
+      </div>
       <p>{author}</p>
     </div>
   );

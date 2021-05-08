@@ -1,10 +1,10 @@
 import Book from "./Book";
 
-const BooksList = ({ booksInfo }) => {
+const BooksList = ({ booksInfo, handleFavorite }) => {
   return (
     <div className="books-container">
       {booksInfo.map((book) => (
-        <Book key={book.isbn} {...book} />
+        <Book handleFavorite={handleFavorite} key={book.isbn} {...book} />
       ))}
     </div>
   );
