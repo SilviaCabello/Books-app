@@ -7,8 +7,8 @@ import books from "./data.js";
 function App() {
   const [favorites, setFavorites] = useState([])
 
-  const handleFavorite = (bookTitle) => {
-    setFavorites([...favorites, bookTitle]);
+  const handleFavorite = (bookInfo) => {
+    setFavorites([...favorites, bookInfo]);
   };
 
   return (

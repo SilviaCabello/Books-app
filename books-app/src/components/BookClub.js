@@ -1,11 +1,13 @@
 import Book from "./Book";
 
 const BookClub = ({ favoritesList }) => {
-    return (
-        <div>
-            {favoritesList.map((favorite) => <Book />)}
-        </div>
-    );
+  return (
+    <div className="books-container">
+      {favoritesList.map((favorite) => (
+        <Book {...favorite}/>
+      ))}
+    </div>
+  );
 };
 
 export default BookClub;
