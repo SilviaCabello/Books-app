@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import BookClub from "./components/BookClub";
 import BooksList from "./components/BooksList";
-import books from "./data.js";
 
 function App() {
-  const [favorites, setFavorites] = useState([])
+  const [favorites, setFavorites] = useState([]);
+  const [books, setBooks] = useState([]);
+
+  const fetchBooks = () => {
+    fetch("https://fakerapi.it/api/v1/books?_quantity=15")
+    .then((res) => res.json())
+    .then((books) => setBooks(books.data));
+  };
+
+  useEffect(fetchBooks, []);
 
   const handleFavorite = (bookInfo) => {
     setFavorites([...favorites, bookInfo]);
