@@ -5,7 +5,7 @@ const Book = ({ image, title, author, handleFavorite }) => {
 
   const handleClick = () => {
     setIsFavorite(!isFavorite);
-    handleFavorite();
+    handleFavorite(title);
   };
 
   return (
