@@ -14,10 +14,10 @@ const Book = ({ image, title, author, handleFavorite }) => {
         <img src={image} alt="book cover " />
       </div>
       <h3>{title}</h3>
+      <p>{author}</p>
       <div className="star" onClick={handleClick}>
         {isFavorite ? "★" : "☆"}
       </div>
-      <p>{author}</p>
     </div>
   );
 };

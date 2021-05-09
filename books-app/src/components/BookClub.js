@@ -4,7 +4,7 @@ const BookClub = ({ favoritesList }) => {
   return (
     <div className="books-container">
       {favoritesList.map((favorite) => (
-        <Book {...favorite}/>
+        <Book key={favorite.title} {...favorite}/>
       ))}
     </div>
   );
