@@ -4,6 +4,7 @@ import "./App.css";
 import BookClub from "./components/BookClub";
 import BooksList from "./components/BooksList";
 import Navbar from "./components/Navbar";
+import BookDetails from "./components/BookDetails";
 
 function App() {
   const [favorites, setFavorites] = useState([]);
@@ -29,11 +30,12 @@ function App() {
           <BookClub favoritesList={favorites} />
         </Route>
         <Route
-          path="/"
+          exact path="/"
           render={() => (
            <BooksList handleFavorite={handleFavorite} booksInfo={books} />
           )}
         />
+        <Route path="/books/:title" render={() => <BookDetails />} />
       </Switch>
     </div>
   );
