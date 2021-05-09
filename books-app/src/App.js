@@ -35,7 +35,7 @@ function App() {
            <BooksList handleFavorite={handleFavorite} booksInfo={books} />
           )}
         />
-        <Route path="/books/:title" render={() => <BookDetails />} />
+        <Route path="/books/:isbn" render={(routeProps) => <BookDetails routeProps={routeProps} books={books} />} />
       </Switch>
     </div>
   );
